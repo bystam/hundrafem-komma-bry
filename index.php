@@ -8,7 +8,8 @@
 <?php
 $variable = 'Läs post och kolla om det finns en entry som heter penis';
 
-echo $variable
+echo $variable;
+
 if (isset($_GET['penis'])) {
 	echo '\npenis igen\n';
 }
