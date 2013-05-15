@@ -10,31 +10,19 @@ $variable = 'Läs post och kolla om det finns en entry som heter penis';
 
 echo $variable;
 
-if (isset($_GET['penis'])) {
-	echo '\npenis igen\n';
+if (isset($_GET['image'])) {
+	$type = $_GET['image'];
+	echo '<pre>';
+	if ($type == 'camel') {
+		readfile('camel');
+	}
+	if ($type == 'bird') {
+		readfile('bird');
+	}
+	echo '</pre>';
 }
 
 
 ?>
-<pre>
-
-    _______\\__
-   (_. _ ._  _/
-    '-' \__. /
-         /  /
-        /  /    .--.  .--.
-       (  (    / '' \/ '' \   "
-        \  \_.'            \   )
-        ||               _  './
-         |\   \     ___.'\  /
-           '-./   .'    \ |/
-              \| /       )|\
-               |/       // \\
-               |\    __//   \\__
-              //\\  /__/     \__|
-          .--_/  \_--.
-         /__/      \__\
-
-</pre>
 </body>
 </html>
