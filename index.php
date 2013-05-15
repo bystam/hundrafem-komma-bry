@@ -9,14 +9,8 @@
 $variable = 'Läs post och kolla om det finns en entry som heter penis';
 
 echo $variable
-if ($GET["penis"] != NULL){
-	echo "penis igen";
-}
-
-
-?>
-<pre>
-
+if ($GET["giraffe"] != NULL){
+	echo "
     _______\\__
    (_. _ ._  _/
     '-' \__. /
@@ -32,7 +26,12 @@ if ($GET["penis"] != NULL){
                |\    __//   \\__
               //\\  /__/     \__|
           .--_/  \_--.
-         /__/      \__\
+         /__/      \__\k ";
+}
+
+
+?>
+<pre>
 
 </pre>
 </body>
