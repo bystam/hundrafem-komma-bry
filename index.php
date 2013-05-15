@@ -8,9 +8,17 @@
 <?php
 $variable = 'Läs post och kolla om det finns en entry som heter penis';
 
-echo $variable
-if ($GET["giraffe"] != NULL){
-	echo "
+
+echo $variable;
+
+if (isset($_GET['radio'])) {
+	echo 'är det här? <br> radio?';
+}
+
+
+?>
+<pre>
+
     _______\\__
    (_. _ ._  _/
     '-' \__. /
@@ -26,7 +34,7 @@ if ($GET["giraffe"] != NULL){
                |\    __//   \\__
               //\\  /__/     \__|
           .--_/  \_--.
-         /__/      \__\k ";
+         /__/      \__\
 }
 
 
