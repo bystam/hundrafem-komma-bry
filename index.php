@@ -20,6 +20,9 @@ if (isset($_GET['image'])) {
 	if ($type == 'bird') {
 		readfile('bird');
 	}
+	if ($type == 'monkey') {
+		readfile('monkey');
+	}
 	echo '</pre>';
 }
 
