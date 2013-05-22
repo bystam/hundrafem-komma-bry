@@ -6,11 +6,6 @@
 </head>
 <body>
 <?php
-$variable = 'Läs post och kolla om det finns en entry som heter penis';
-
-
-echo $variable;
-
 if (isset($_GET['image'])) {
 	$type = $_GET['image'];
 	echo '<pre>';
@@ -27,10 +22,13 @@ if (isset($_GET['image'])) {
 }
 
 echo '<img src="./logo.png">';
-
 ?>
 
 <script type="text/javascript" src="http://www.caster.fm/embed.php?uid=113641"></script>
 <iframe frameborder="0" height="240" width="264" src="http://www.caster.fm/status_embed.php?uid=113641" scrolling="no" name="casterframe"></iframe>
+<?php 
+$variable = '<br>Läs post och kolla om det finns en entry som heter penis';
+echo $variable;
+?>
 </body>
 </html>
