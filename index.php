@@ -26,7 +26,7 @@ if (isset($_GET['image'])) {
 	echo '</pre>';
 }
 
-echo 'bist';
+echo '<img src="./logo.png">';
 
 ?>
 
