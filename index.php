@@ -28,5 +28,8 @@ if (isset($_GET['image'])) {
 
 
 ?>
+
+<script type="text/javascript" src="http://www.caster.fm/embed.php?uid=113641"></script>
+<iframe frameborder="0" height="240" width="264" src="http://www.caster.fm/status_embed.php?uid=113641" scrolling="no" name="casterframe"></iframe>
 </body>
 </html>
