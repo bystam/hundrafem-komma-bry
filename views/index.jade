@@ -1,8 +1,14 @@
-!!!5
-html
-	head
-		title Hundrafem komma bry
-	body
-		script(type='text/javascript', src='http://www.caster.fm/embed.php?uid=113641')
-		iframe(frameborder='0', height='240', width='264',
-			src='http://www.caster.fm/status_embed.php?uid=113641', scrolling='no', name='casterframe')
+extend layout
+
+block content
+	script(type='text/javascript', src='http://www.caster.fm/embed.php?uid=113641')
+
+block sidebar
+	.widget
+		h1 Widget
+		p.
+			Sed auctor neque eu tellus rhoncus ut
+			eleifend nibh porttitor. Ut in nulla enim.
+		p.
+			Vivamus hendrerit arcu sed erat molestie
+			vehicula.
