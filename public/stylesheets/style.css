@@ -166,6 +166,10 @@ header {
   padding: 0px 10px;
   margin-bottom: 10px;
 }
+.sidebar .widget #an_dreas {
+  padding: 15px;
+  width: 80%;
+}
 p {
   line-height: 1.8;
 }
