@@ -3,7 +3,7 @@ extend layout
 block scripts
 	script(src='/socket.io/socket.io.js')
 	script.
-		var socket = io.connect('http://localhost');
+		var socket = io.connect('/');
 		socket.on('to-client', function (data) {
 			var div = document.getElementById('chatframe').innerHTML += '<div class="message"><h3>' +
 			data.author.toString () + '</h3><p>' + data.message.toString() + '</p></div>';
