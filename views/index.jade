@@ -15,11 +15,12 @@ block scripts
 		function sendMessage() {
 			var chatText = document.getElementById('text-input');
 			var author = document.getElementById('author').value;
-			if (chatText.value == '' || author.value == '')
+			if (chatText.value == '' || author == '')
 				return;
 			var text = chatText.value;
 			chatText.value = '';
 			socket.emit('to-server', { author: author, message: text});
+			chatText.focus();
 		}
 
 block content
@@ -31,7 +32,7 @@ block chat
 		form
 			input(type='text', id='author')
 			input(type='text', id='text-input')
-			input(type='button', id='submit-text', value='Skicka', onclick='sendMessage();')
+			input(type='submit', id='submit-text', value='Skicka', onclick='sendMessage(); return false;')
 
 block sidebar
 	.widget
