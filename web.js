@@ -30,6 +30,12 @@ app.get('/', function(req, res) {
 	);
 });
 
+// Heroku specific configuration
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 // setup socket.io echoing
 io.sockets.on('connection', function (socket) {
 	socket.on('to-server', function(data) {
