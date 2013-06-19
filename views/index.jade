@@ -1,7 +1,37 @@
 extend layout
 
+block scripts
+	script(src='/socket.io/socket.io.js')
+	script.
+		var socket = io.connect('http://localhost');
+		socket.on('to-client', function (data) {
+			var div = document.getElementById('chatframe').innerHTML += '<div class="message"><h3>' +
+			data.author.toString () + '</h3><p>' + data.message.toString() + '</p></div>';
+
+			var chatFrame = document.getElementById("chatframe");
+			chatFrame.scrollTop = chatFrame.scrollHeight;
+		});
+
+		function sendMessage() {
+			var chatText = document.getElementById('text-input');
+			var author = document.getElementById('author').value;
+			if (chatText.value == '' || author.value == '')
+				return;
+			var text = chatText.value;
+			chatText.value = '';
+			socket.emit('to-server', { author: author, message: text});
+		}
+
 block content
 	script(type='text/javascript', src='http://www.caster.fm/embed.php?uid=113641')
+
+block chat
+	#chatframe
+	.chat-controls
+		form
+			input(type='text', id='author')
+			input(type='text', id='text-input')
+			input(type='button', id='submit-text', value='Skicka', onclick='sendMessage();')
 
 block sidebar
 	.widget

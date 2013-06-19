@@ -32,8 +32,8 @@ app.get('/', function(req, res) {
 
 // setup socket.io echoing
 io.sockets.on('connection', function (socket) {
-	socket.on('data', function(data) {
-		socket.write(data);
+	socket.on('to-server', function(data) {
+		io.sockets.emit('to-client', data );
 	});
 });
 
