@@ -16,3 +16,5 @@ node_modules
 
 # compiled
 *.css
+
+.DS_Store
