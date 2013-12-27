@@ -75,7 +75,14 @@ head
               p
                 | Här kan du lyssna på Hundrafem Komma Bry! Varför? Fan vet jag... görabadirr.
           .col-md-2.text-center
-              script(type="text/javascript", src="http://www.caster.fm/embed.php?uid=172534")
+              script(type="text/javascript")
+                var cstrpuid = 172534;
+                var cstrpwidth = "500";
+                var cstrpheight = "325";
+              script(type="text/javascript", src="http://cdn.caster.fm/0070B7/widgets/player.js")
+              a(id="cstrplb", href="http://www.caster.fm/") Free Shoutcast Hosting
+              a(id="cstrplb2", href="http://www.caster.fm/") Radio Stream Hosting
+              #cstrpdiv
     //
        /Services 
     //
@@ -97,24 +104,22 @@ head
           .col-md-4.col-md-offset-2.text-center
             .portfolio-item
               a(href='#')
-                img.img-portfolio.img-responsive(src='img/portfolio-1.jpg')
-              h4 Cityscape
+                img.img-portfolio.img-responsive(src='img/bystam_batman.jpg')
+              h4 Fredrik Bystam
           .col-md-4.text-center
             .portfolio-item
               a(href='#')
-                img.img-portfolio.img-responsive(src='img/portfolio-2.jpg')
-              h4 Is That On Fire?
+                img.img-portfolio.img-responsive(src='img/jens_doquis.jpg')
+              h4 Jens Arvidsson
         .row
           .col-md-4.col-md-offset-2.text-center
             .portfolio-item
-              a(href='#')
-                img.img-portfolio.img-responsive(src='img/portfolio-3.jpg')
-              h4 Stop Sign
+              p.
+                Äter mer mat än de flesta
           .col-md-4.text-center
             .portfolio-item
-              a(href='#')
-                img.img-portfolio.img-responsive(src='img/portfolio-4.jpg')
-              h4 Narrow Focus
+              p.
+                Äter mer mat än många
     //
        /Portfolio 
     //
@@ -125,16 +130,17 @@ head
           .col-md-6.col-md-offset-3.text-center
             h3 Tryck jättemycket på de här knapparna!
             a.btn.btn-lg.btn-default(href='#') Bry!
-            a.btn.btn-lg.btn-primary(href='#') Inget bry!
+            a.btn.btn-lg.btn-warning(href='#') Inget bry!
     //
        /Call to Action 
     //
        Map 
     #contact.map
-      iframe(width='100%', height='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed')
+      iframe(width='100%', height='100%', frameborder='0', scrolling='no', marginheight='0', marginwidth='0', src='https://maps.google.se/maps?near=647+30+Mariefred&geocode=CW6xClaf6_GdFYM5iAMdHMcGASkzv-wbjQFfRjHLjlgwt-0Jeg&q=pizzeria&f=l&sll=59.25941,17.221413&sspn=0.016321,0.045447&t=h&ie=UTF8&hq=pizzeria&hnear=&ll=59.259826,17.219676&spn=0.00816,0.022724&z=14&iwloc=A&cid=14731851270127987803&output=embed')
       br
       small
-        a(href='https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A')
+        a(href='https://maps.google.se/maps?near=647+30+Mariefred&geocode=CW6xClaf6_GdFYM5iAMdHMcGASkzv-wbjQFfRjHLjlgwt-0Jeg&q=pizzeria&f=l&sll=59.25941,17.221413&sspn=0.016321,0.045447&t=h&ie=UTF8&hq=pizzeria&hnear=&z=14&iwloc=A&cid=14731851270127987803&ll=59.259826,17.219676&source=embed', style='color: #0000FF; text-align: left;')
+
     //
        /Map 
     //
