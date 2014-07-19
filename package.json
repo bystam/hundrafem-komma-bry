@@ -4,14 +4,15 @@
   "private": "true",
   "engines": {
     "node": "0.10.x",
-    "npm":  "1.2.x"
+    "npm": "1.2.x"
   },
   "dependencies": {
     "express": "3.0.0alpha4",
     "jade": "*",
-    "nib": "*",
     "markdown": "*",
-    "socket.io": "*",
-    "nodeunit": "*"
+    "morgan": "^1.1.1",
+    "nib": "*",
+    "nodeunit": "*",
+    "socket.io": "*"
   }
 }
