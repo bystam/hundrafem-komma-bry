@@ -13,7 +13,12 @@
     "markdown": "*",
     "morgan": "^1.1.1",
     "nib": "*",
+    "node-sass": "^0.9.3",
     "nodeunit": "*",
-    "socket.io": "*"
+    "socket.io": "*",
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0"
   }
 }

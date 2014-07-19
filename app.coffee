@@ -1,8 +1,9 @@
-express = require("express")
+express = require 'express'
 app = express()
 server = require("http").createServer(app)
 io = require("socket.io").listen(server)
 morgan = require 'morgan'
+sass = require 'node-sass'
 
 #stylus = require('stylus'),
 nib = require("nib")
@@ -21,6 +22,11 @@ nib = require("nib")
 app.set "views", __dirname + "/views"
 app.set "view engine", "jade"
 app.use morgan()
+app.use sass.middleware {
+  src: __dirname + '/src/scss',
+  dest: __dirname + '/public/',
+  debug: true
+}
 
 #
 #app.use(stylus.middleware(
