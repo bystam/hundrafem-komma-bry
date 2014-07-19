@@ -35,11 +35,10 @@ app.use express.static(__dirname + "/public")
 app.get "/", (req, res) ->
   res.render "freelancer", title: "Radio"
 
-
 # Heroku specific configuration
-io.configure ->
-  io.set "transports", ["xhr-polling"]
-  io.set "polling duration", 10
+#io.configure ->
+#  io.set "transports", ["xhr-polling"]
+#  io.set "polling duration", 10
 
 # setup socket.io echoing
 io.sockets.on "connection", (socket) ->
