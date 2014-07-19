@@ -103,6 +103,8 @@ header .intro-text .skills {
 }
 
 #shield {
+    -moz-animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
 }
 
 @media(min-width:768px) {
