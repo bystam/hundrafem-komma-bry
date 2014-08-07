@@ -35,11 +35,11 @@ html(lang="en")
             li.hidden
               a(href="#page-top")
             li.page-scroll
-              a(href="#portfolio") Portfolio
+              a(href="#portfolio") Video
             li.page-scroll
-              a(href="#about") About
+              a(href="#about") Om
             li.page-scroll
-              a(href="#contact") Contact
+              a(href="#contact") Anmälan
         // /.navbar-collapse
       // /.container-fluid
     header
@@ -55,126 +55,55 @@ html(lang="en")
       .container
         .row
           .col-lg-12.text-center
-            h2 Portfolio
-            hr.star-primary
-        .row
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal1", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/cabin.png", alt="")
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal2", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/cake.png", alt="")
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal3", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/circus.png", alt="")
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal4", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/game.png", alt="")
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal5", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/safe.png", alt="")
-          .col-sm-4.portfolio-item
-            a.portfolio-link(href="#portfolioModal6", data-toggle="modal")
-              .caption
-                .caption-content
-                  i.fa.fa-search-plus.fa-3x
-              img.img-responsive(src="img/portfolio/submarine.png", alt="")
+            <iframe src="//player.vimeo.com/video/28732877" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     section#about.success
       .container
         .row
           .col-lg-12.text-center
-            h2 About
+            h2 n0llegasquen 2014
             hr.star-light
         .row
           .col-lg-4.col-lg-offset-2
             p
-              | Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.
+              | Kanske den viktigaste festen på hela året. Bete dig inte som ett keffo utan anmäl dig idag.
           .col-lg-4
             p
-              | Whether you"re a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!
-          .col-lg-8.col-lg-offset-2.text-center
-            a.btn.btn-lg.btn-outline(href="#")
-              i.fa.fa-download
-              | Download Theme
+              | Om du inte anmäler dig kommer Datasektionen bokstavligt talat falla samman - blodet kommer vara på dina händer
     section#contact
       .container
         .row
           .col-lg-12.text-center
-            h2 Contact Me
+            h2 Anmälan
             hr.star-primary
         .row
           .col-lg-8.col-lg-offset-2
             form(role="form")
               .row
                 .form-group.col-xs-12.floating-label-form-group
-                  label(for="name") Name
-                  input.form-control(type="text", name="name", placeholder="Name")
+                  label(for="name") Namn
+                  input.form-control(type="text", name="name", placeholder="Namn")
               .row
                 .form-group.col-xs-12.floating-label-form-group
-                  label(for="email") Email Address
-                  input.form-control(type="email", name="email", placeholder="Email Address")
+                  label(for="email") Email
+                  input.form-control(type="email", name="email", placeholder="Email")
+              .row
+                  div(style="white-space:nowrap;border-bottom: 1px solid #EEE")
+                    label(for="alcohol", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Alkohol
+                    input.round-checkbox(type="checkbox", name="alcohol", id="alcohol", style="display:inline")
               .row
                 .form-group.col-xs-12.floating-label-form-group
-                  label(for="message") Message
-                  textarea.form-control(placeholder="Message", rows="5")
+                  label(for="allergies") Allergier
+                  textarea.form-control(placeholder="Allergier", rows="2")
               br
               .row
                 .form-group.col-xs-12
                   button.btn.btn-lg.btn-success(type="submit") Send
     footer.text-center
-      .footer-above
-        .container
-          .row
-            .footer-col.col-md-4
-              h3 Location
-              p
-                | 3481 Melrose Place
-                br
-                | Beverly Hills, CA 90210
-            .footer-col.col-md-4
-              h3 Around the Web
-              ul.list-inline
-                li
-                  a.btn-social.btn-outline(href="#")
-                    i.fa.fa-fw.fa-facebook
-                li
-                  a.btn-social.btn-outline(href="#")
-                    i.fa.fa-fw.fa-google-plus
-                li
-                  a.btn-social.btn-outline(href="#")
-                    i.fa.fa-fw.fa-twitter
-                li
-                  a.btn-social.btn-outline(href="#")
-                    i.fa.fa-fw.fa-linkedin
-                li
-                  a.btn-social.btn-outline(href="#")
-                    i.fa.fa-fw.fa-dribbble
-            .footer-col.col-md-4
-              h3 About Freelance
-              p
-                | Freelance is a free to use, open source Bootstrap theme created by
-                a(href="http://startbootstrap.com") Start Bootstrap
-                | .
       .footer-below
         .container
           .row
             .col-lg-12
-              | Copyright &#169; 2014 - Your Name
+              | 2014 - Datasektionens mottagning
     .scroll-top.page-scroll.visible-xs.visble-sm
       a.btn.btn-primary(href="#page-top")
         i.fa.fa-chevron-up
