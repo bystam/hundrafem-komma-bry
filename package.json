@@ -19,6 +19,8 @@
     "grunt": "~0.4.2",
     "grunt-contrib-sass": "~0.6.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-cssmin": "~0.7.0"
+    "grunt-contrib-cssmin": "~0.7.0",
+    "google-spreadsheet": "~0.2.8",
+    "nodemailer":"1.1.1"
   }
 }
