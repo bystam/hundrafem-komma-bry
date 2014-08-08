@@ -7,6 +7,8 @@ lib-cov
 *.pid
 *.gz
 
+auth.js
+
 pids
 logs
 results
