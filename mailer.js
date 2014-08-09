@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer'),
     smtpTransport = require('nodemailer-smtp-transport'),
-    auth = require('./auth/auth');
+    auth = require('./auth');
 
 exports.sendConfirmation = function (submission) {
   send (submission.recipient, 'Bekräftelse anmälan n0llegasquen 2014', getConfirmationBody (submission.name, submission.alcohol, submission.allergies));
