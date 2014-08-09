@@ -43,7 +43,7 @@ var addSubmissionToGoogleDocs = function (submission, res) {
   var sheet = new GoogleSpreadsheet(auth.google_form_key);
 
   sheet.setAuth (auth.google_username, auth.google_password , function(err) {
-    sheet.getInfo (function( err, sheet_info ) {
+    sheet.getInfo (function(err, sheet_info ) {
       sheet_info.worksheets[0].getRows (function( err, rows ) {
         var GUEST_LIMIT = rows[0].guestlimit;
         var submissionList = rows.length > GUEST_LIMIT ? RESERVE : ORDINARY;
