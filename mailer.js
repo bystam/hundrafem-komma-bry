@@ -3,11 +3,11 @@ var nodemailer = require('nodemailer'),
     auth = require('./auth');
 
 exports.sendConfirmation = function (submission) {
-  send (submission.recipient, 'Bekräftelse anmälan n0llegasquen 2014', getConfirmationBody (submission.name, submission.alcohol, submission.allergies));
+  send (submission.recipient, 'Bekräftelse anmälan nØllegasquen 2014', getConfirmationBody (submission.name, submission.alcohol, submission.allergies));
 }
 
 exports.sendReserve = function (submission) {
-  send (submission.recipient, 'Reservlistan för n0llegasquen 2014', getReserveBody (submission.name, submission.alcohol, submission.allergies));
+  send (submission.recipient, 'Reservlistan för nØllegasquen 2014', getReserveBody (submission.name, submission.alcohol, submission.allergies));
 }
 
 exports.notifyTitelAboutReserveList = function () {
@@ -41,20 +41,20 @@ var send = function (recipient, title, body) {
 var getConfirmationBody = function(name, alcohol, allergies){
   return "Hej "+name+"!"+
   "<p>Detta mail är en bekräftelse på att du nu är anmäld till Datasektionens "+
-  "n0llegasque 2014! Betalningsinformation kommer via mail inom några dagar.</p> "+
+  "nØllegasque 2014! Betalningsinformation kommer via mail inom några dagar.</p> "+
   "<p>Dina anmälningsparametrar är: "+
   "<br>Alkohol: "+alcohol+
-  "<br>Allergier: "+allergies+"</p>"+
+  "<br>Matpreferenser: "+allergies+"</p>"+
   "<p>Kul att du kommer!</p> "+
   "<br>MVH Titel 2014";
 }
 
 var getReserveBody = function(name, alcohol, allergies){
   return "Hej "+name+"!"+
-  "<p>Detta mail är en bekräftelse på att du nu är uppskriven på reservlistan för Datasektionens n0llegasque 2014</p>"+
+  "<p>Detta mail är en bekräftelse på att du nu är uppskriven på reservlistan för Datasektionens nØllegasque 2014</p>"+
   "<p>Dina anmälningsparametrar är: "+
   "<br>Alkohol: "+alcohol+
-  "<br>Allergier: "+allergies+"</p>"+
+  "<br>Matpreferenser: "+allergies+"</p>"+
   "<p>Kul att du kommer!</p> "+
   "<br>MVH Titel 2014";
 }
