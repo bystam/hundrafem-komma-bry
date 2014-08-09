@@ -3,7 +3,7 @@ var express = require('express'),
     server = require('http').createServer(app),
     nib = require("nib"),
     GoogleSpreadsheet = require("google-spreadsheet"),
-    auth = require('./auth'),
+    auth = require('./auth/auth'),
     mailer = require('./mailer');
 
 app.set("views", __dirname + "/views");
