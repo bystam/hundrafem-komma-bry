@@ -49,7 +49,7 @@ var addSubmissionToGoogleDocs = function (submission, res) {
         var submissionList = rows.length > GUEST_LIMIT ? RESERVE : ORDINARY;
 
         sheet.addRow( submissionList, 
-                      { namn: submission.name, email: submission.recipient,allergier: submission.allergies, alkohol: submission.alcohol} );
+                      { namn: submission.name, email: submission.recipient, allergier: submission.allergies, alkohol: submission.alcohol });
 
         if (submissionList === RESERVE) {
           notifyReserveSubmission (submission, sheet_info);
