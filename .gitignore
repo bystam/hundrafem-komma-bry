@@ -20,5 +20,3 @@ node_modules
 .DS_Store
 .sass-cache
 deploy
-
-public/css/*
