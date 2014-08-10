@@ -84,16 +84,36 @@ html(lang="en")
                   input.form-control(type="text", name="name", placeholder="Namn")
               .row
                 .form-group.col-xs-12.floating-label-form-group
+                  label(for="personnummer") Personnummer
+                  input.form-control(type="text", name="personnummer", placeholder="Personnummer")
+              .row
+                .form-group.col-xs-12.floating-label-form-group
                   label(for="email") Email
                   input.form-control(type="email", name="email", placeholder="Email")
+              .row
+                .form-group.col-xs-12.floating-label-form-group
+                  label(for="phone") Telefonnummer
+                  input.form-control(type="text", name="phone", placeholder="Telefonnummer")
               .row
                   div(style="white-space:nowrap;border-bottom: 1px solid #EEE")
                     label(for="alcohol", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Alkohol
                     input.round-checkbox(type="checkbox", name="alcohol", id="alcohol", style="display:inline")
               .row
+                  div(style="white-space:nowrap;border-bottom: 1px solid #EEE")
+                    label(for="vegetarian", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Vegetarian
+                    input.round-checkbox(type="checkbox", name="vegetarian", id="vegetarian", style="display:inline")
+                    label(for="vegan", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Vegan
+                    input.round-checkbox(type="checkbox", name="vegan", id="vegan", style="display:inline")
+                    label(for="laktos", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Laktos
+                    input.round-checkbox(type="checkbox", name="laktos", id="laktos", style="display:inline")
+                    label(for="gluten", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Gluten
+                    input.round-checkbox(type="checkbox", name="gluten", id="gluten", style="display:inline")
+                    label(for="skaldjur", style="line-height:normal;font-size:1.5em;padding: 25px 15px;font-weight:normal") Skaldjursallergiker
+                    input.round-checkbox(type="checkbox", name="skaldjur", id="skaldjur", style="display:inline")
+              .row
                 .form-group.col-xs-12.floating-label-form-group
-                  label(for="allergies") Matpreferenser
-                  textarea.form-control(placeholder="Matpreferenser", rows="2", id="allergi", name="allergies")
+                  label(for="allergies") Övriga matpreferenser
+                  textarea.form-control(placeholder="Övriga matpreferenser", rows="2", id="allergi", name="misc")
               br
               .row
                 .form-group.col-xs-12

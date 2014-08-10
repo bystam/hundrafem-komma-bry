@@ -23,16 +23,22 @@ app.post('/submit', function (req, res) {
 });
 
 var registerSubmission = function (req, res) {
-  console.log ("lolfi");
-  var name = req.body.name;
-  var email_adress = req.body.email;
-  var alcohol = req.body.alcohol == undefined ? "nej" : "ja";
-  var allergies = req.body.allergies;
+  var submission = {};
+  submission.name = req.body.name;
+  submission.personnummer = req.body.personnummer;
+  submission.phone = req.body.phone;
+  submission.recipient = req.body.email;
+  submission.alcohol = req.body.alcohol == undefined ? "nej" : "ja";
+  submission.vegetarian = req.body.vegetarian == undefined ? "nej" : "ja";
+  submission.vegan = req.body.vegan == undefined ? "nej" : "ja";
+  submission.laktos = req.body.laktos == undefined ? "nej" : "ja";
+  submission.gluten = req.body.gluten == undefined ? "nej" : "ja";
+  submission.skaldjur = req.body.skaldjur == undefined ? "nej" : "ja";
+  submission.misc = req.body.misc;
 
-  if (undefined === name || "" === name || undefined === email_adress || "" === email_adress)
+  if (undefined === submission.name || "" === submission.name || undefined === submission.recipient || "" === submission.recipient)
     return res.render( "failure", { title: "Misslyckades" });
 
-  var submission = { recipient: email_adress, name: name, alcohol: alcohol, allergies: allergies };
   addSubmissionToGoogleDocs (submission, res);
 };
 
@@ -40,16 +46,26 @@ var ORDINARY = 1;
 var RESERVE = 2;
 
 var addSubmissionToGoogleDocs = function (submission, res) {
-  var sheet = new GoogleSpreadsheet(auth.google_form_key);
+  var sheet = new GoogleSpreadsheet(auth.form_key);
 
-  sheet.setAuth (auth.google_username, auth.google_password , function(err) {
+  sheet.setAuth (auth.username, auth.password , function(err) {
     sheet.getInfo (function(err, sheet_info ) {
       sheet_info.worksheets[0].getRows (function( err, rows ) {
         var GUEST_LIMIT = rows[0].guestlimit;
         var submissionList = rows.length > GUEST_LIMIT ? RESERVE : ORDINARY;
-
         sheet.addRow( submissionList, 
-                      { namn: submission.name, email: submission.recipient, allergier: submission.allergies, alkohol: submission.alcohol });
+                      { namn: submission.name, 
+                        personnummer: submission.personnummer,
+                        email: submission.recipient, 
+                        telefonnummer: submission.phone,
+                        alkohol: submission.alcohol,
+                        vegetarian: submission.vegetarian,
+                        vegan: submission.vegan,
+                        laktos: submission.laktos,
+                        gluten: submission.gluten,
+                        skaldjur: submission.skaldjur,
+                        matpreferenser: submission.misc
+                      });
 
         if (submissionList === RESERVE) {
           notifyReserveSubmission (submission, sheet_info);

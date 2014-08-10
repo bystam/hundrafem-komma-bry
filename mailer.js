@@ -3,11 +3,11 @@ var nodemailer = require('nodemailer'),
     auth = require('./auth');
 
 exports.sendConfirmation = function (submission) {
-  send (submission.recipient, 'Bekräftelse anmälan nØllegasquen 2014', getConfirmationBody (submission.name, submission.alcohol, submission.allergies));
+  send (submission.recipient, 'Bekräftelse anmälan nØllegasquen 2014', getConfirmationBody (submission));
 }
 
 exports.sendReserve = function (submission) {
-  send (submission.recipient, 'Reservlistan för nØllegasquen 2014', getReserveBody (submission.name, submission.alcohol, submission.allergies));
+  send (submission.recipient, 'Reservlistan för nØllegasquen 2014', getReserveBody (submission));
 }
 
 exports.notifyTitelAboutReserveList = function () {
@@ -38,23 +38,30 @@ var send = function (recipient, title, body) {
   transporter.sendMail(mailOptions, function(error, info) { }); // TODO handle this error?
 }
 
-var getConfirmationBody = function(name, alcohol, allergies){
-  return "Hej "+name+"!"+
+var getConfirmationBody = function(submission){
+  return "Hej "+submission.name+"!"+
   "<p>Detta mail är en bekräftelse på att du nu är anmäld till Datasektionens "+
   "nØllegasque 2014! Betalningsinformation kommer via mail inom några dagar.</p> "+
-  "<p>Dina anmälningsparametrar är: "+
-  "<br>Alkohol: "+alcohol+
-  "<br>Matpreferenser: "+allergies+"</p>"+
+  getSubmissionParameterList(submission) +
   "<p>Kul att du kommer!</p> "+
   "<br>MVH Titel 2014";
 }
 
-var getReserveBody = function(name, alcohol, allergies){
-  return "Hej "+name+"!"+
+var getReserveBody = function(submission){
+  return "Hej "+submission.name+"!"+
   "<p>Detta mail är en bekräftelse på att du nu är uppskriven på reservlistan för Datasektionens nØllegasque 2014</p>"+
-  "<p>Dina anmälningsparametrar är: "+
-  "<br>Alkohol: "+alcohol+
-  "<br>Matpreferenser: "+allergies+"</p>"+
+  getSubmissionParameterList(submission) +
   "<p>Kul att du kommer!</p> "+
   "<br>MVH Titel 2014";
+}
+
+var getSubmissionParameterList = function(submission){
+  return "<p>Dina anmälningsparametrar är: "+
+  "<br>Alkohol: "+submission.alcohol +
+  "<br>Vegetarian: " +submission.vegetarian +
+  "<br>Vegan: " + submission.vegan +
+  "<br>Laktos: " + submission.laktos +
+  "<br>Gluten: " + submission.gluten +
+  "<br>Skaldjursallergiker: " + submission.skaldjur +
+  "<br>Övriga matpreferenser: " + submission.misc + "</p>";
 }
