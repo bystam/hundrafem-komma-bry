@@ -53,6 +53,7 @@ var addSubmissionToGoogleDocs = function (submission, res) {
       sheet_info.worksheets[0].getRows (function( err, rows ) {
         var GUEST_LIMIT = rows[0].guestlimit;
         var submissionList = rows.length > GUEST_LIMIT ? RESERVE : ORDINARY;
+
         sheet.addRow( submissionList, 
                       { namn: submission.name, 
                         personnummer: submission.personnummer,

@@ -8,7 +8,6 @@ lib-cov
 *.gz
 
 auth.js
-auth/
 
 pids
 logs

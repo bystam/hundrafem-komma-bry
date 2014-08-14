@@ -27,7 +27,7 @@ var send = function (recipient, title, body) {
     maxMessages: 10
   }));
 
-  var mailOptions = {
+  var mail = {
       from: 'Titel<titel@d.kth.se>', // sender address
       to: recipient, // list of receivers
       subject: title, // Subject line
@@ -35,7 +35,12 @@ var send = function (recipient, title, body) {
       html: body // html body
   };
 
-  transporter.sendMail(mailOptions, function(error, info) { }); // TODO handle this error?
+  transporter.sendMail(mail, function(error, info) {
+    if (error)
+      console.log(error);
+    else
+      console.log(info);
+  });
 }
 
 var getConfirmationBody = function(submission){
@@ -56,7 +61,7 @@ var getReserveBody = function(submission){
 }
 
 var getSubmissionParameterList = function(submission){
-  return "<p>Dina anmälningsparametrar är: "+
+  return "<p>Här är sammanställningen av din anmälan: "+
   "<br>Alkohol: "+submission.alcohol +
   "<br>Vegetarian: " +submission.vegetarian +
   "<br>Vegan: " + submission.vegan +
